@@ -6,12 +6,18 @@ const bcrypt = require("./bcrypt");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
 const db = require("./database");
+var paypal = require('paypal-rest-sdk');
 
 
 app.use(compression());
 
 app.use(express.static('./public'));
 app.use(express.json());
+app.use(
+    express.urlencoded({
+        extended: false
+    })
+);
 
 if (process.env.NODE_ENV != 'production') {
     app.use(
@@ -108,6 +114,17 @@ app.post("/login", (request, response) => {
             console.log(e);
             response.sendStatus(500);
         });
+});
+
+app.get("/displays/:id",(req, res) => {
+    console.log("req.params.id",req.params.id);
+    db.getInfo(req.params.id).then(result => {
+        console.log("info index", result.rows);
+        res.json(result.rows);
+    })
+    .catch(e =>{
+        console.log("e",e);
+    })
 });
 
 app.get("/logout", function(req, res) {

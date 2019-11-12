@@ -18,3 +18,10 @@ module.exports.login = function(email) {
         [email]
     );
 };
+module.exports.getInfo = function(id) {
+    return db.query(
+        `SELECT id,title,description,image_url FROM description WHERE id=$1
+        `,
+        [id]
+    );
+};

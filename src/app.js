@@ -7,6 +7,9 @@ import ContactMe from "./contact";
 import Portfolio from "./portfolio";
 import Imgcarousel from "./imgcarousel";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import Order from "./order";
+import Display from "./imageformdisplay";
+// import { useState } from "react-redux";
 
 export default function App() {
     console.log("in app");
@@ -15,13 +18,11 @@ export default function App() {
         <div>
             <BrowserRouter>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home" img>
-                        Cake Walk
-                    </Navbar.Brand>
+                    <Navbar.Brand href="#home">Cake Walk</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/">About Me</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/portfolio">Portfolio</Nav.Link>
                             <Nav.Link href="/testimonials">
                                 Testimonials
@@ -40,9 +41,6 @@ export default function App() {
                                     FAQ
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
@@ -100,6 +98,17 @@ export default function App() {
                                 />
                             )}
                         />
+                        <Route
+                            path="/order"
+                            render={props => (
+                                <Order
+                                    key={props.match.url}
+                                    match={props.match}
+                                    history={props.history}
+                                />
+                            )}
+                        />
+                        <Route path="/display/:id" component={Display} />
                     </div>
                     <footer> &copy;upasana tyagi</footer>
                 </div>
