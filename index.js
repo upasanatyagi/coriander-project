@@ -6,7 +6,11 @@ const bcrypt = require("./bcrypt");
 const cookieSession = require("cookie-session");
 const csurf = require("csurf");
 const db = require("./database");
-var paypal = require('paypal-rest-sdk');
+const braintree = require('braintree');
+var gateway = braintree.connect({
+  accessToken: "access_token$sandbox$997qq868sxvbx599$8450f1e3f5f3286e434edf4608151517"
+});
+
 
 
 app.use(compression());
