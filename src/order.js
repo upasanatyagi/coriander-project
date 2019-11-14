@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import axios from "./axios";
 
 export default function Order(props) {
-    // console.log("order props", props);
+    console.log("order props", props);
+
     const [size, setSize] = useState();
     const [message, setMessage] = useState();
     const [post, setPost] = useState();
+    const [showCheckoutBtn, setshowCheckoutBtn] = useState(false);
     useEffect(() => {
         setPost(false);
     }, []);
@@ -23,7 +25,12 @@ export default function Order(props) {
             });
             setSize(null);
             setMessage(null);
-            location.replace("/checkout");
+            setshowCheckoutBtn(true);
+            props.setchkDetail({
+                msg: message,
+                size: size,
+                cake_id: props.cake_id
+            });
         })();
     }, [post]);
 
@@ -81,6 +88,8 @@ export default function Order(props) {
             <Button variant="primary" onClick={() => setPost(true)}>
                 Add to Cart
             </Button>
+
+            {showCheckoutBtn && <Link to="/checkout">Go to checkout</Link>}
         </form>
     );
 }

@@ -214,9 +214,10 @@ app.post("/sizemsg", async (req, res) => {
         });
 });
 
-app.get("/checkouts", (req, res) => {
-    console.log("checkout i am here");
-    db.checkoutinfo(req.session.userId)
+app.get("/checkouts/:id", (req, res) => {
+    const cake_id = req.params.id;
+    console.log("checkout i am here cake_id", cake_id);
+    db.checkoutinfo(req.session.userId, cake_id)
         .then(({ rows }) => {
             console.log("******checkout rows", rows);
             res.json(rows);

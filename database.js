@@ -35,14 +35,18 @@ module.exports.postInfo = function(id, message, size, cake_id) {
 module.exports.checkoutinfo = function(id, cake_id) {
     console.log("db id, cake_id", id, cake_id);
     return db.query(
-        `SELECT DISTINCT ON(image_url) image_url,title,size,message,first,last
+        `SELECT image_url,title,size,message,first,last
         FROM description
         JOIN orders
         ON cake_id=description.id
         JOIN registration
         ON user_id=registration.id
-        WHERE registration.id=$1 AND cake_id=$2
+        WHERE registration.id=$1 AND orders.cake_id=$2
+        ORDER BY orders.id DESC
+        LIMIT 1
+
         `,
         [id, cake_id]
     );
 };
+// `SELECT DISTINCT ON(orders.cake_id) image_url,title,size,message,first,last

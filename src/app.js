@@ -1,7 +1,6 @@
-import React from "react";
-import axios from "./axios";
+import React, { useState } from "react";
 
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import AboutMe from "./about";
 import ContactMe from "./contact";
 import Portfolio from "./portfolio";
@@ -11,11 +10,11 @@ import Order from "./order";
 import Display from "./imageformdisplay";
 import Checkout from "./checkout";
 import Faq from "./faq";
-// import { useState } from "react-redux";
 
 export default function App() {
     console.log("in app");
-
+    const [chkDetail, setchkDetail] = useState();
+    console.log("app chkDetail", chkDetail);
     return (
         <div>
             <BrowserRouter>
@@ -24,13 +23,21 @@ export default function App() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-                            <Nav.Link href="/testimonials">
+                            <Link className="nav-link" to="/">
+                                Home
+                            </Link>
+                            <Link className="nav-link" to="/portfolio">
+                                Portfolio
+                            </Link>
+                            <Link className="nav-link" to="/testimonials">
                                 Testimonials
-                            </Nav.Link>
-                            <Nav.Link href="/meet">Meet</Nav.Link>
-                            <Nav.Link href="/contactme">Contact</Nav.Link>
+                            </Link>
+                            <Link className="nav-link" to="/meet">
+                                Meet
+                            </Link>
+                            <Link className="nav-link" to="/contactme">
+                                Contact
+                            </Link>
                             <Nav.Link href="/logout">LogOut</Nav.Link>
                             <NavDropdown
                                 title="Dropdown"
@@ -110,20 +117,24 @@ export default function App() {
                                 />
                             )}
                         />
-                        <Route path="/display/:id" component={Display} />
+                        <Route
+                            path="/display/:id"
+                            render={props => (
+                                <Display
+                                    {...props}
+                                    setchkDetail={setchkDetail}
+                                />
+                            )}
+                        />
                         <Route path="/faq" component={Faq} />
                         <Route
                             path="/checkout"
                             render={props => (
-                                <Checkout
-                                    key={props.match.url}
-                                    match={props.match}
-                                    history={props.history}
-                                />
+                                <Checkout {...props} chkDetail={chkDetail} />
                             )}
                         />
                     </div>
-                    <footer> &copy;upasana tyagi</footer>
+                    <footer> &copy;Upasana Garg</footer>
                 </div>
             </BrowserRouter>
         </div>

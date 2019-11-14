@@ -22,7 +22,10 @@ export default function Display(props) {
             <img src={info.image_url} />
             <p>{info.title}</p>
             <p>{info.description}</p>
-            <Order cake_id={props.match.params.id} />
+            <Order
+                cake_id={props.match.params.id}
+                setchkDetail={props.setchkDetail}
+            />
         </div>
     );
 }
