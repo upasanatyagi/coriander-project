@@ -47,8 +47,25 @@ footer {
     transition: border-color 0.5s ease-out;
     text-align: center;
 } */
-.container img {
+.portfolio img {
     height: 300px;
     width: 300px;
     object-fit: cover;
+}
+
+.carousel img {
+    height: 90vh;
+    object-fit: cover;
+}
+
+.imageformdisplay img {
+    height: 400px;
+}
+
+.checkoutImg1 img {
+    height: 50px;
+}
+
+.checkoutImg2 img {
+    height: 200px;
 }

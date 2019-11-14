@@ -10,6 +10,7 @@ import Order from "./order";
 import Display from "./imageformdisplay";
 import Checkout from "./checkout";
 import Faq from "./faq";
+import Testimonials from "./testimonials";
 
 export default function App() {
     console.log("in app");
@@ -80,7 +81,7 @@ export default function App() {
                         <Route
                             path="/testimonials"
                             render={props => (
-                                <Portfolio
+                                <Testimonials
                                     key={props.match.url}
                                     match={props.match}
                                     history={props.history}

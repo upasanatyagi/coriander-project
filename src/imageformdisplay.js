@@ -19,7 +19,9 @@ export default function Display(props) {
     }
     return (
         <div>
-            <img src={info.image_url} />
+            <div className="imageformdisplay">
+                <img src={info.image_url} />
+            </div>
             <p>{info.title}</p>
             <p>{info.description}</p>
             <Order

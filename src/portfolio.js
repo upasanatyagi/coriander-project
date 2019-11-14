@@ -9,7 +9,7 @@ export default function Portfolio() {
     };
 
     return (
-        <Container className="container">
+        <Container className="portfolio">
             <Row>
                 <Col lg={4}>
                     <Link to="/display/1">

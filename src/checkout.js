@@ -18,14 +18,18 @@ export default function Checkout(props) {
     return (
         <div>
             <p>Would you like to checkout?</p>
-            <img src="/pics/shopkart.png" />
+            <div className="checkoutImg1">
+                <img src="/pics/shopkart.png" />
+            </div>
             {checkout && (
                 <React.Fragment>
                     <p>{checkout.first}</p>
                     <p>{checkout.last}</p>
                     <p>{checkout.message}</p>
                     <p>{checkout.size}</p>
-                    <img src={checkout.image_url} />
+                    <div className="checkoutImg2">
+                        <img src={checkout.image_url} />
+                    </div>
                 </React.Fragment>
             )}
             <textarea placeholder="your shipping address"></textarea>
