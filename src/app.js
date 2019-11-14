@@ -11,6 +11,7 @@ import Display from "./imageformdisplay";
 import Checkout from "./checkout";
 import Faq from "./faq";
 import Testimonials from "./testimonials";
+import ShoppingKart from "./shoppingkart";
 
 export default function App() {
     console.log("in app");
@@ -20,7 +21,9 @@ export default function App() {
         <div>
             <BrowserRouter>
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">Cake Walk</Navbar.Brand>
+                    <Navbar.Brand href="/pics/cakewalk.gif">
+                        Cake Walk
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
@@ -39,7 +42,7 @@ export default function App() {
                             <Link className="nav-link" to="/contactme">
                                 Contact
                             </Link>
-                            <Nav.Link href="/logout">LogOut</Nav.Link>
+
                             <NavDropdown
                                 title="Dropdown"
                                 id="collasible-nav-dropdown"
@@ -52,6 +55,7 @@ export default function App() {
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
                             </NavDropdown>
+                            <Nav.Link href="/logout">LogOut</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -128,6 +132,7 @@ export default function App() {
                             )}
                         />
                         <Route path="/faq" component={Faq} />
+                        <Route path="/shoppingkart" component={ShoppingKart} />
                         <Route
                             path="/checkout"
                             render={props => (

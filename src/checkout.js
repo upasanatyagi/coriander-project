@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "./axios";
 import { useState, useEffect } from "react";
+import ShoppingKart from "./shoppingkart";
 
 export default function Checkout(props) {
     console.log("checkout props", props.chkDetail);
@@ -19,21 +20,23 @@ export default function Checkout(props) {
         <div>
             <p>Would you like to checkout?</p>
             <div className="checkoutImg1">
-                <img src="/pics/shopkart.png" />
+                <img src="/pics/shoppingkartlogo.png" />
             </div>
             {checkout && (
                 <React.Fragment>
-                    <p>{checkout.first}</p>
-                    <p>{checkout.last}</p>
-                    <p>{checkout.message}</p>
-                    <p>{checkout.size}</p>
-                    <div className="checkoutImg2">
-                        <img src={checkout.image_url} />
+                    <div className="checkoutDisplay">
+                        <p>{checkout.first}</p>
+                        <p>{checkout.last}</p>
+                        <p>{checkout.message}</p>
+                        <p>{checkout.size}</p>
+                        <div className="checkoutImg2">
+                            <img src={checkout.image_url} />
+                        </div>
                     </div>
                 </React.Fragment>
             )}
-            <textarea placeholder="your shipping address"></textarea>
-            <button>place your order here</button>
+            <ShoppingKart />
+
             <p>thank you for placing an order with us</p>
         </div>
     );

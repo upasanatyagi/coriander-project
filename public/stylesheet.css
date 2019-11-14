@@ -47,10 +47,64 @@ footer {
     transition: border-color 0.5s ease-out;
     text-align: center;
 } */
+body {
+    background: #708090;
+}
+
+#welcome {
+    /* font-family: Arial; */
+    font-family: "Monoton", cursive;
+    font-size: 45px;
+    text-align: center;
+    color: BlueViolet;
+    margin-bottom: -5px;
+    margin-top: 2px;
+}
+
+#welcome1 {
+    height: 200px;
+    width: 200px;
+    display: block;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reg {
+    background-color: red;
+}
+
+#registration {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#registration input {
+    height: 50px;
+    font-size: 20px;
+    width: 330px;
+    margin: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 5px;
+    transition: border-color 0.5s ease-out;
+}
+
+.portfolio1 {
+    background-color: #C0C0C0;
+    text-align: center;
+    margin-top: 5px;
+}
+
 .portfolio img {
     height: 300px;
     width: 300px;
     object-fit: cover;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 10px;
 }
 
 .carousel img {
@@ -68,4 +122,16 @@ footer {
 
 .checkoutImg2 img {
     height: 200px;
+}
+
+.checkoutDisplay {
+    display: inline-flex;
+}
+
+.feedback {
+    margin-top: 20px;
+}
+
+.feedback1 {
+    margin-bottom: 10px;
 }
