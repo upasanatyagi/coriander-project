@@ -9,6 +9,8 @@ import Imgcarousel from "./imgcarousel";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Order from "./order";
 import Display from "./imageformdisplay";
+import Checkout from "./checkout";
+import Faq from "./faq";
 // import { useState } from "react-redux";
 
 export default function App() {
@@ -109,6 +111,17 @@ export default function App() {
                             )}
                         />
                         <Route path="/display/:id" component={Display} />
+                        <Route path="/faq" component={Faq} />
+                        <Route
+                            path="/checkout"
+                            render={props => (
+                                <Checkout
+                                    key={props.match.url}
+                                    match={props.match}
+                                    history={props.history}
+                                />
+                            )}
+                        />
                     </div>
                     <footer> &copy;upasana tyagi</footer>
                 </div>

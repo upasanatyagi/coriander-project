@@ -11,7 +11,7 @@ export default function Display(props) {
                 `/displays/${props.match.params.id}`
             );
             setInfo(data[0]);
-            console.log("INfo is cool", info);
+            // console.log("INfo is cool", info);
         })();
     }, []);
     if (!info) {
@@ -22,7 +22,7 @@ export default function Display(props) {
             <img src={info.image_url} />
             <p>{info.title}</p>
             <p>{info.description}</p>
-            <Order />
+            <Order cake_id={props.match.params.id} />
         </div>
     );
 }

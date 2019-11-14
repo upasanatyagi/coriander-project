@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "./axios";
+import React from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export default function Portfolio(props) {
+export default function Portfolio() {
     const openPortfolio = e => {
         console.log("e.target.src", e.target.src);
     };

@@ -16,6 +16,9 @@ export default function ContactMe() {
                 cols="42"
                 placeholder="Message here"
             ></textarea>
+            <a href="https://www.instagram.com/garg_upasana">
+                Link to instagram
+            </a>
             <Button variant="primary">Primary</Button>
         </div>
     );
