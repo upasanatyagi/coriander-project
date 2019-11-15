@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Header } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 export default function Testimonials() {
     return (

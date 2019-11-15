@@ -25,11 +25,20 @@ export default function Checkout(props) {
             {checkout && (
                 <React.Fragment>
                     <div className="checkoutDisplay">
-                        <p>{checkout.first}</p>
-                        <p>{checkout.last}</p>
-                        <p>{checkout.message}</p>
-                        <p>{checkout.size}</p>
+                        <div>
+                            <h3>
+                                Ordered by:{checkout.first}
+                                {checkout.last}
+                            </h3>
+                        </div>
+                        <div>
+                            <p> Message:{checkout.message}</p>
+                        </div>
+                        <div>
+                            <p>Ordered Size:{checkout.size}</p>
+                        </div>
                         <div className="checkoutImg2">
+                            Refrence Image:
                             <img src={checkout.image_url} />
                         </div>
                     </div>

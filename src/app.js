@@ -12,6 +12,7 @@ import Checkout from "./checkout";
 import Faq from "./faq";
 import Testimonials from "./testimonials";
 import ShoppingKart from "./shoppingkart";
+import Menu from "./menu";
 
 export default function App() {
     console.log("in app");
@@ -133,6 +134,7 @@ export default function App() {
                         />
                         <Route path="/faq" component={Faq} />
                         <Route path="/shoppingkart" component={ShoppingKart} />
+                        <Route path="/menu" component={Menu} />
                         <Route
                             path="/checkout"
                             render={props => (

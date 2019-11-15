@@ -12,7 +12,6 @@ export default function Imgcarousel() {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <p>First slide label</p>
                         <h3>Black Forest Cake</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -24,7 +23,6 @@ export default function Imgcarousel() {
                     />
 
                     <Carousel.Caption>
-                        <p>Second slide label</p>
                         <h3>Floral Butter Cream Cake</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -36,7 +34,6 @@ export default function Imgcarousel() {
                     />
 
                     <Carousel.Caption>
-                        <p>Third slide label</p>
                         <h3>Highway Cake</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -48,7 +45,6 @@ export default function Imgcarousel() {
                     />
 
                     <Carousel.Caption>
-                        <p>Fourth slide label</p>
                         <h3>Butter Cream Cake</h3>
                     </Carousel.Caption>
                 </Carousel.Item>

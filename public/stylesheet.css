@@ -48,15 +48,14 @@ footer {
     text-align: center;
 } */
 body {
-    background: #708090;
+    background: #cccccc;
 }
 
 #welcome {
-    /* font-family: Arial; */
-    font-family: "Monoton", cursive;
+    font-family: "Dancing Script", cursive;
     font-size: 45px;
     text-align: center;
-    color: BlueViolet;
+    color: #ff6699;
     margin-bottom: -5px;
     margin-top: 2px;
 }
@@ -71,7 +70,11 @@ body {
 }
 
 .reg {
-    background-color: red;
+    background-color: pink;
+}
+
+.login {
+    background-color: pink;
 }
 
 #registration {
@@ -79,6 +82,44 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
+}
+
+#contactMe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 5px;
+    z-index: 1;
+}
+
+.contactbtn {
+    margin-top: 5px;
+    z-index: 1;
+}
+
+#contactMe input {
+    height: 50px;
+    font-size: 20px;
+    width: 330px;
+    margin: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 5px;
+    transition: border-color 0.5s ease-out;
+    z-index: 1;
+}
+
+#contactMe p {
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1;
+    height: 38px;
+    width: 370px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 #registration input {
@@ -92,8 +133,40 @@ body {
     transition: border-color 0.5s ease-out;
 }
 
+#registration input:focus {
+    background-color: #ffe6ff;
+}
+
+#textarea {
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login input {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    height: 30px;
+    width: 250px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.login input:focus {
+    background-color: #ffe6ff;
+}
+
 .portfolio1 {
-    background-color: #C0C0C0;
+    background-color: #f2f2f2;
     text-align: center;
     margin-top: 5px;
 }
@@ -102,12 +175,15 @@ body {
     height: 300px;
     width: 300px;
     object-fit: cover;
-    border: 1px solid black;
-    margin: 2px;
+    border: 6px double #4d4d4d;
+    margin: 5px;
     border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 255, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .carousel img {
+    margin-top: 10px;
     height: 90vh;
     object-fit: cover;
 }
@@ -134,4 +210,103 @@ body {
 
 .feedback1 {
     margin-bottom: 10px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.me img {
+    height: 400px;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 8px;
+    border: 3px solid Gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.desc {
+    background-color: pink;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 3px solid Gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.desc p {
+    font-family: "Dancing Script", cursive;
+    font-size: 21px;
+}
+
+.price {
+    display: flex;
+    text-align: center;
+}
+
+.tb {
+    display: grid;
+    padding-top: 110px;
+}
+
+.thumbnail {
+    display: grid;
+    justify-items: center;
+    border: 2px solid Green;
+    background-color: #ffe6ff;
+    /* padding: 10px; */
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 255, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.thumbnail img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.thumbnailBox {
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    width: 100%;
+    padding-top: 10px;
+    /* text-align: center; */
+}
+
+.contactimg {
+    height: 200px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* For IE8 and earlier */
+}
+
+.pricetable {
+    border: 2px solid Gray;
+    margin-top: 10px;
+}
+
+#btnlogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnSubmit {
+    margin: 0;
+    height: 35px;
+    border-radius: 53px;
+    width: 100px;
+    border: 2px solid green;
+    background-color: #ff6699;
+    font-size: 18px;
 }
