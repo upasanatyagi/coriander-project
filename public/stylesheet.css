@@ -9,6 +9,8 @@ body {
 footer {
     position: fixed;
     color: pink;
+    bottom: 0;
+    transform: translateX(25vw);
 }
 
 #welcome {
@@ -263,6 +265,7 @@ footer {
     object-fit: cover;
     border-radius: 8px;
     margin-top: 5px;
+    border: 4px double #804000;
 }
 
 .imgdisplay p {
@@ -300,6 +303,7 @@ footer {
     flex-direction: column;
     border-radius: 5px;
     margin-top: 88px;
+    border: 4px solid #66d9ff
 }
 
 .checkoutImg1 {
@@ -314,7 +318,7 @@ footer {
     width: 200px;
     margin-right: 20px;
     object-fit: cover;
-    border: 3px solid #66d9ff;
+    border: 3px solid #804000;
     margin-bottom: 26px;
     border-radius: 5px;
 }
@@ -336,8 +340,10 @@ footer {
 }
 
 .detailBox h5 {
-    color: #8f00b3;
-    font-family: 'Wallpoet', cursive;
+    color: #804000;
+    font-size: 30px;
+    /* font-family: 'Wallpoet', cursive; */
+    font-family: "Dancing Script", cursive;
     padding-left: 64px;
 }
 
@@ -346,4 +352,25 @@ footer {
     text-align: center;
     background-color: #ffdd99;
     border-radius: 5px;
+}
+
+.faq {
+    background-color: #ffdd99;
+    margin-top: 190px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.dtl {
+    margin-left: 159px;
+    padding-top: 34px;
+    font-size: 19px;
+    font-weight: bold;
+    border: hidden;
+    margin-left: 48px;
+}
+
+.sum {
+    background-color: pink;
+    width: 95%;
 }

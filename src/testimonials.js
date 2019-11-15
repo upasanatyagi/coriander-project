@@ -15,9 +15,9 @@ export default function Testimonials() {
                                 image and the taste was really good too!
                                 Everyone who ate it loved it.{" "}
                             </p>
-                            <footer className="blockquote-footer">
+                            <div className="blockquote-footer">
                                 Prison Mike <cite title="Source Title"></cite>
-                            </footer>
+                            </div>
                         </blockquote>
                     </Card.Body>
                 </Card>
@@ -33,9 +33,9 @@ export default function Testimonials() {
                                 all friends and family!! Recommended your name
                                 to all;){" "}
                             </p>
-                            <footer className="blockquote-footer">
+                            <div className="blockquote-footer">
                                 Archana Singh <cite title="Source Title"></cite>
-                            </footer>
+                            </div>
                         </blockquote>
                     </Card.Body>
                 </Card>
