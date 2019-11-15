@@ -34,11 +34,12 @@ export default function App() {
                             <Link className="nav-link" to="/portfolio">
                                 Portfolio
                             </Link>
-                            <Link className="nav-link" to="/testimonials">
-                                Testimonials
-                            </Link>
+
                             <Link className="nav-link" to="/meet">
                                 Meet
+                            </Link>
+                            <Link className="nav-link" to="/testimonials">
+                                Testimonials
                             </Link>
                             <Link className="nav-link" to="/contactme">
                                 Contact

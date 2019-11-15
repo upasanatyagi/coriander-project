@@ -5,7 +5,7 @@ import Login from "./login";
 
 export default function Welcome() {
     return (
-        <div>
+        <div className="wel">
             <p id="welcome">Welcome to</p>
             <div>
                 <img id="welcome1" src="/pics/cakewalk.gif" />
