@@ -79,17 +79,23 @@ export default function Order(props) {
             <Form.Group controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Cake Inscription eg. Happy Birthday!</Form.Label>
                 <Form.Control
+                    id="ordertxt"
                     as="textarea"
                     rows="3"
                     onChange={e => setMessage(e.target.value)}
                 />
             </Form.Group>
 
-            <Button variant="primary" onClick={() => setPost(true)}>
+            <Button
+                id="orderbtn"
+                variant="primary"
+                onClick={() => setPost(true)}
+            >
                 Add to Cart
             </Button>
-
-            {showCheckoutBtn && <Link to="/checkout">Go to checkout</Link>}
+            <div className="linkbtn">
+                {showCheckoutBtn && <Link to="/checkout">Go to checkout</Link>}
+            </div>
         </form>
     );
 }

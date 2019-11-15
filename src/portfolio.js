@@ -118,8 +118,10 @@ export default function Portfolio() {
                 <Row>
                     <Col lg={4}>
                         <Link to="/display/13">
-                            <img src="/pics/ninjacake.jpg" />
-                            onClick={e => openPortfolio(e)}
+                            <img
+                                src="/pics/ninjacake.jpg"
+                                onClick={e => openPortfolio(e)}
+                            />
                         </Link>
                     </Col>
                     <Col lg={4}>

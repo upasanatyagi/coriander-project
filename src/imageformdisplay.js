@@ -18,11 +18,11 @@ export default function Display(props) {
         return null;
     }
     return (
-        <div>
+        <div className="imgdisplay">
             <div className="imageformdisplay">
                 <img src={info.image_url} />
             </div>
-            <p>{info.title}</p>
+            <h3>{info.title}</h3>
             <p>{info.description}</p>
             <Order
                 cake_id={props.match.params.id}
