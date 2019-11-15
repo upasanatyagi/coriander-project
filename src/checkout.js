@@ -17,36 +17,36 @@ export default function Checkout(props) {
         })();
     }, []);
     return (
-        <div>
-            <p>Would you like to checkout?</p>
-            <div className="checkoutImg1">
-                <img src="/pics/shoppingkartlogo.png" />
-            </div>
+        <div className="shopSummery">
             {checkout && (
                 <React.Fragment>
                     <div className="checkoutDisplay">
-                        <div>
-                            <h3>
-                                Ordered by:{checkout.first}
-                                {checkout.last}
-                            </h3>
-                        </div>
-                        <div>
-                            <p> Message:{checkout.message}</p>
-                        </div>
-                        <div>
-                            <p>Ordered Size:{checkout.size}</p>
-                        </div>
-                        <div className="checkoutImg2">
-                            Refrence Image:
-                            <img src={checkout.image_url} />
+                        <div className="checkoutImg1">
+                            <div className="detailBox">
+                                <div className="box1">
+                                    <img src="/pics/shoppingkartlogo.png" />
+                                    <h3>Would you like to checkout?</h3>
+                                </div>
+                                <h5>
+                                    Ordered by:{checkout.first} {checkout.last}
+                                </h5>
+                                <h5> Message:{checkout.message}</h5>
+                                <h5>Ordered Size:{checkout.size}</h5>
+                            </div>
+
+                            <div className="orderedCake">
+                                <img src={checkout.image_url} />
+                            </div>
                         </div>
                     </div>
+
+                    <div className="checkoutImg2"></div>
                 </React.Fragment>
             )}
-            <ShoppingKart />
-
-            <p>thank you for placing an order with us</p>
+            <div className="address">
+                <p>Thank you for placing an order with us!!</p>
+                <ShoppingKart />
+            </div>
         </div>
     );
 }

@@ -9,7 +9,7 @@ export default function ContactMe() {
                 <div className="contactimg">
                     <img src="/pics/sidepic.jpg" />
                 </div>
-                <p>If you have questions ,please contact:</p>
+                <p>If you have questions, please contact:</p>
 
                 <input name="name" placeholder="name" />
                 <input name="email" placeholder="email" />

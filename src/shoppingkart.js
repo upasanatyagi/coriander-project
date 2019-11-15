@@ -8,7 +8,7 @@ export default function ShoppingKart() {
 
                 <Form.Group controlId="formGridAddress1">
                     <Form.Label>Address</Form.Label>
-                    <Form.Control placeholder="1234 Main St" />
+                    <Form.Control placeholder="alexzander platz 1" />
                 </Form.Group>
 
                 <Form.Row>

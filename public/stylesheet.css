@@ -293,3 +293,57 @@ footer {
     color: red;
     font-weight: bold;
 }
+
+.shopSummery {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-top: 88px;
+}
+
+.checkoutImg1 {
+    display: flex;
+}
+
+.orderedCake img {
+    align-self: flex-end;
+    margin-left: 373px;
+    margin-top: 30px;
+    height: 203px;
+    width: 200px;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 3px solid #66d9ff;
+    margin-bottom: 26px;
+    border-radius: 5px;
+}
+
+.box1 {
+    display: inline-flex;
+}
+
+.box1 h3 {
+    width: 359px;
+    padding-left: 5px;
+    margin-top: 11px;
+}
+
+.detailBox {
+    margin-left: 40px;
+    margin-top: 20px;
+    padding-top: 27px;
+}
+
+.detailBox h5 {
+    color: #8f00b3;
+    font-family: 'Wallpoet', cursive;
+    padding-left: 64px;
+}
+
+.address {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffdd99;
+    border-radius: 5px;
+}
